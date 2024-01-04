@@ -1,9 +1,3 @@
-/*
-    Accepts 2 value and has a choice from MDAS.
-    The User of the system sometimes make mistake make sure only accept values stated on main menu.
-    The owner also want to make the system loop so it can solve problems without reopening the system.
-*/ 
-
 #include <iostream>
 using namespace std;
 int MainMenu();
