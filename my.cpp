@@ -6,67 +6,76 @@
 
 #include <iostream>
 using namespace std;
-int main()
-{
-    int x, y, choice;
-    char continueChoice = 'yes';
+int MainMenu();
+int main(){
+    int n1, n2, choice;
+    char continueChoice = 'y';
 
     do
     {
         do
         {
-            cout
-                << "--- Please Select for Math Solution to use ---\n"
-                << "1. Add\n"
-                << "2. Subtract\n"
-                << "3. Multipliction\n"
-                << "4. Division\n"
-                << "\n"
-                << "Enter Choice: ";
-            cin >> choice;
-
-            system("cls");
-
-            switch (choice)
+        	choice = MainMenu();
+        	switch (choice)
             {
             case 1:
-                cout << "Please input value 1:";
-                cin >> x;
-                cout << "Please input value 2:";
-                cin >> y;
-                cout << x << " + " << y << " = " << x + y << "\n";
+                cout << "Enter 1st Value: ";
+                cin >> n1;
+                cout << "Enter 2nd Value: ";
+                cin >> n2;
+                cout << n1 << " + " << n2 << " = " << n1 + n2 << "\n";
                 break;
+                
             case 2:
-                cout << "Please input value 1:";
-                cin >> x;
-                cout << "Please input value 2:";
-                cin >> y;
-                cout << x << " - " << y << " = " << x - y << "\n";
+                cout << "Enter 1st Value: ";
+                cin >> n1;
+                cout << "Enter 2nd Value: ";
+                cin >> n2;
+                cout << n1 << " - " << n2 << " = " << n1 - n2 << "\n";
                 break;
+                
             case 3:
-                cout << "Please input value 1:";
-                cin >> x;
-                cout << "Please input value 2:";
-                cin >> y;
-                cout << x << " * " << y << " = " << x * y << "\n";
+                cout << "Enter 1st Value: ";
+                cin >> n1;
+                cout << "Enter 2nd Value: ";
+                cin >> n2;
+                cout << n1 << " * " << n2 << " = " << n1 * n2 << "\n";
                 break;
+                
             case 4:
-                cout << "Please input value 1:";
-                cin >> x;
-                cout << "Please input value 2:";
-                cin >> y;
-                cout << x << " / " << y << " = " << x / y << "\n";
+                cout << "Enter 1st Value: ";
+                cin >> n1;
+                cout << "Enter 2nd Value: ";
+                cin >> n2;
+                cout << n1 << " / " << n2 << " = " << n1 / n2 << "\n";
                 break;
+                
             default:
                 cout << "User Input Incorrect\n\n";
                 break;
             }
         } while (choice < 0 || choice > 5);
 
-        cout << "Do you want to Continue [yes/no]:";
+        cout << "Continue? [y/n]: ";
         cin >> continueChoice;
 
         system("cls");
 
-    } while (continueChoice == 'yes');
+    } while (continueChoice == 'y');
+}
+int MainMenu(){
+    int choice;	
+        cout
+            << "--- Operation Selection ---\n"
+            << "1. Add\n"
+            << "2. Subtract\n"
+            << "3. Multiply\n"
+            << "4. Divide\n"
+            << "\n"
+            << "Enter Operation: ";
+        cin >> choice;
+
+        system("cls");
+
+        return choice;
 }
